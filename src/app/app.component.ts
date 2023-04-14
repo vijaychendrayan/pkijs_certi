@@ -41,41 +41,41 @@ export class AppComponent {
   async generateCertificatePFX() {
     const pwd = "welogical";
 
-    const cert:any = `-----BEGIN CERTIFICATE-----
-    MIICajCCAcwCFDynpN5Ssw9J1++fMnasb87rfJrgMAoGCCqGSM49BAMCMHQxCzAJ
-    BgNVBAYTAklOMRAwDgYDVQQIDAdHVUpBUkFUMQ8wDQYDVQQHDAZWQUxTQUQxCzAJ
-    BgNVBAoMAlBQMQswCQYDVQQLDAJQUDELMAkGA1UEAwwCUFAxGzAZBgkqhkiG9w0B
-    CQEWDHBwQGdtYWlsLmNvbTAeFw0yMzA0MDQwOTU4MzZaFw0yMzA1MDQwOTU4MzZa
-    MHQxCzAJBgNVBAYTAklOMRAwDgYDVQQIDAdHVUpBUkFUMQ8wDQYDVQQHDAZWQUxT
-    QUQxCzAJBgNVBAoMAkFQMQswCQYDVQQLDAJBUDELMAkGA1UEAwwCQVAxGzAZBgkq
-    hkiG9w0BCQEWDGFwQGdtYWlsLmNvbTCBmzAQBgcqhkjOPQIBBgUrgQQAIwOBhgAE
-    AAuJXGrhINQZRFVKeCTw1Wu2ote3HYXfTpuscRSicZjFRJchjTVDecQEAdiURmwK
-    O4oBtQTfnjLWn1iw8AjNu58/AePKbpoHPO/0BH/5IeZ+XhdQELS2QbyQb8C8ZIzO
-    ayAHZkyu3Osuyo63j2/JFHI7k22CKjUeTuo+lWdvag9cmX4PMAoGCCqGSM49BAMC
-    A4GLADCBhwJBVCgEy9cJdHpmbgQSUdutgoARyWxDgOR9RXxeYcvoQbq8epUpwc6n
-    nJfQpgGQuhhUNizEaTedMA1vGNs5QRu3fBwCQgGtXm7H/YEbv+SbmRZLS/EsNqKC
-    JKqqmNIjKItrvsmoktHELDg+ciS67iGEdqKH1RW5a/m0Vr9L5u8Eq6U4WZEa0A==
-    -----END CERTIFICATE-----`;
+    // const cert:any = `-----BEGIN CERTIFICATE-----
+    // MIICajCCAcwCFDynpN5Ssw9J1++fMnasb87rfJrgMAoGCCqGSM49BAMCMHQxCzAJ
+    // BgNVBAYTAklOMRAwDgYDVQQIDAdHVUpBUkFUMQ8wDQYDVQQHDAZWQUxTQUQxCzAJ
+    // BgNVBAoMAlBQMQswCQYDVQQLDAJQUDELMAkGA1UEAwwCUFAxGzAZBgkqhkiG9w0B
+    // CQEWDHBwQGdtYWlsLmNvbTAeFw0yMzA0MDQwOTU4MzZaFw0yMzA1MDQwOTU4MzZa
+    // MHQxCzAJBgNVBAYTAklOMRAwDgYDVQQIDAdHVUpBUkFUMQ8wDQYDVQQHDAZWQUxT
+    // QUQxCzAJBgNVBAoMAkFQMQswCQYDVQQLDAJBUDELMAkGA1UEAwwCQVAxGzAZBgkq
+    // hkiG9w0BCQEWDGFwQGdtYWlsLmNvbTCBmzAQBgcqhkjOPQIBBgUrgQQAIwOBhgAE
+    // AAuJXGrhINQZRFVKeCTw1Wu2ote3HYXfTpuscRSicZjFRJchjTVDecQEAdiURmwK
+    // O4oBtQTfnjLWn1iw8AjNu58/AePKbpoHPO/0BH/5IeZ+XhdQELS2QbyQb8C8ZIzO
+    // ayAHZkyu3Osuyo63j2/JFHI7k22CKjUeTuo+lWdvag9cmX4PMAoGCCqGSM49BAMC
+    // A4GLADCBhwJBVCgEy9cJdHpmbgQSUdutgoARyWxDgOR9RXxeYcvoQbq8epUpwc6n
+    // nJfQpgGQuhhUNizEaTedMA1vGNs5QRu3fBwCQgGtXm7H/YEbv+SbmRZLS/EsNqKC
+    // JKqqmNIjKItrvsmoktHELDg+ciS67iGEdqKH1RW5a/m0Vr9L5u8Eq6U4WZEa0A==
+    // -----END CERTIFICATE-----`;
 
-    //using ec private key
-    const key:any = `-----BEGIN EC PRIVATE KEY-----
-    MIHcAgEBBEIApLmnlJFKswUbZzxrVfT5YcUHt+uISytpBXn+L9KJCSQjv8AP/heJ
-    xoJoX6ghqpXmBcaj6MEU1yPBH7vZjAcPr+igBwYFK4EEACOhgYkDgYYABAALiVxq
-    4SDUGURVSngk8NVrtqLXtx2F306brHEUonGYxUSXIY01Q3nEBAHYlEZsCjuKAbUE
-    354y1p9YsPAIzbufPwHjym6aBzzv9AR/+SHmfl4XUBC0tkG8kG/AvGSMzmsgB2ZM
-    rtzrLsqOt49vyRRyO5Ntgio1Hk7qPpVnb2oPXJl+Dw==
-    -----END EC PRIVATE KEY-----`;
+    // //using ec private key
+    // const key:any = `-----BEGIN EC PRIVATE KEY-----
+    // MIHcAgEBBEIApLmnlJFKswUbZzxrVfT5YcUHt+uISytpBXn+L9KJCSQjv8AP/heJ
+    // xoJoX6ghqpXmBcaj6MEU1yPBH7vZjAcPr+igBwYFK4EEACOhgYkDgYYABAALiVxq
+    // 4SDUGURVSngk8NVrtqLXtx2F306brHEUonGYxUSXIY01Q3nEBAHYlEZsCjuKAbUE
+    // 354y1p9YsPAIzbufPwHjym6aBzzv9AR/+SHmfl4XUBC0tkG8kG/AvGSMzmsgB2ZM
+    // rtzrLsqOt49vyRRyO5Ntgio1Hk7qPpVnb2oPXJl+Dw==
+    // -----END EC PRIVATE KEY-----`;
 
     // console.log('-----inside generateCertificate------')
     // console.log('Key      : ',key);
     // console.log('Cert     : ',cert);
     // console.log('Password : ',pwd)
-    // const certificateBASE64 = "MIICajCCAcwCFDynpN5Ssw9J1++fMnasb87rfJrgMAoGCCqGSM49BAMCMHQxCzAJBgNVBAYTAklOMRAwDgYDVQQIDAdHVUpBUkFUMQ8wDQYDVQQHDAZWQUxTQUQxCzAJBgNVBAoMAlBQMQswCQYDVQQLDAJQUDELMAkGA1UEAwwCUFAxGzAZBgkqhkiG9w0BCQEWDHBwQGdtYWlsLmNvbTAeFw0yMzA0MDQwOTU4MzZaFw0yMzA1MDQwOTU4MzZaMHQxCzAJBgNVBAYTAklOMRAwDgYDVQQIDAdHVUpBUkFUMQ8wDQYDVQQHDAZWQUxTQUQxCzAJBgNVBAoMAkFQMQswCQYDVQQLDAJBUDELMAkGA1UEAwwCQVAxGzAZBgkqhkiG9w0BCQEWDGFwQGdtYWlsLmNvbTCBmzAQBgcqhkjOPQIBBgUrgQQAIwOBhgAEAAuJXGrhINQZRFVKeCTw1Wu2ote3HYXfTpuscRSicZjFRJchjTVDecQEAdiURmwKO4oBtQTfnjLWn1iw8AjNu58/AePKbpoHPO/0BH/5IeZ+XhdQELS2QbyQb8C8ZIzOayAHZkyu3Osuyo63j2/JFHI7k22CKjUeTuo+lWdvag9cmX4PMAoGCCqGSM49BAMCA4GLADCBhwJBVCgEy9cJdHpmbgQSUdutgoARyWxDgOR9RXxeYcvoQbq8epUpwc6nnJfQpgGQuhhUNizEaTedMA1vGNs5QRu3fBwCQgGtXm7H/YEbv+SbmRZLS/EsNqKCJKqqmNIjKItrvsmoktHELDg+ciS67iGEdqKH1RW5a/m0Vr9L5u8Eq6U4WZEa0A=="
-    // const privateKeyBASE64 = "MIHcAgEBBEIApLmnlJFKswUbZzxrVfT5YcUHt+uISytpBXn+L9KJCSQjv8AP/heJxoJoX6ghqpXmBcaj6MEU1yPBH7vZjAcPr+igBwYFK4EEACOhgYkDgYYABAALiVxq4SDUGURVSngk8NVrtqLXtx2F306brHEUonGYxUSXIY01Q3nEBAHYlEZsCjuKAbUE354y1p9YsPAIzbufPwHjym6aBzzv9AR/+SHmfl4XUBC0tkG8kG/AvGSMzmsgB2ZMrtzrLsqOt49vyRRyO5Ntgio1Hk7qPpVnb2oPXJl+Dw=="
+    const certificateBASE64:any = "MIICajCCAcwCFDynpN5Ssw9J1++fMnasb87rfJrgMAoGCCqGSM49BAMCMHQxCzAJBgNVBAYTAklOMRAwDgYDVQQIDAdHVUpBUkFUMQ8wDQYDVQQHDAZWQUxTQUQxCzAJBgNVBAoMAlBQMQswCQYDVQQLDAJQUDELMAkGA1UEAwwCUFAxGzAZBgkqhkiG9w0BCQEWDHBwQGdtYWlsLmNvbTAeFw0yMzA0MDQwOTU4MzZaFw0yMzA1MDQwOTU4MzZaMHQxCzAJBgNVBAYTAklOMRAwDgYDVQQIDAdHVUpBUkFUMQ8wDQYDVQQHDAZWQUxTQUQxCzAJBgNVBAoMAkFQMQswCQYDVQQLDAJBUDELMAkGA1UEAwwCQVAxGzAZBgkqhkiG9w0BCQEWDGFwQGdtYWlsLmNvbTCBmzAQBgcqhkjOPQIBBgUrgQQAIwOBhgAEAAuJXGrhINQZRFVKeCTw1Wu2ote3HYXfTpuscRSicZjFRJchjTVDecQEAdiURmwKO4oBtQTfnjLWn1iw8AjNu58/AePKbpoHPO/0BH/5IeZ+XhdQELS2QbyQb8C8ZIzOayAHZkyu3Osuyo63j2/JFHI7k22CKjUeTuo+lWdvag9cmX4PMAoGCCqGSM49BAMCA4GLADCBhwJBVCgEy9cJdHpmbgQSUdutgoARyWxDgOR9RXxeYcvoQbq8epUpwc6nnJfQpgGQuhhUNizEaTedMA1vGNs5QRu3fBwCQgGtXm7H/YEbv+SbmRZLS/EsNqKCJKqqmNIjKItrvsmoktHELDg+ciS67iGEdqKH1RW5a/m0Vr9L5u8Eq6U4WZEa0A=="
+    const privateKeyBASE64:any = "MIHcAgEBBEIApLmnlJFKswUbZzxrVfT5YcUHt+uISytpBXn+L9KJCSQjv8AP/heJxoJoX6ghqpXmBcaj6MEU1yPBH7vZjAcPr+igBwYFK4EEACOhgYkDgYYABAALiVxq4SDUGURVSngk8NVrtqLXtx2F306brHEUonGYxUSXIY01Q3nEBAHYlEZsCjuKAbUE354y1p9YsPAIzbufPwHjym6aBzzv9AR/+SHmfl4XUBC0tkG8kG/AvGSMzmsgB2ZMrtzrLsqOt49vyRRyO5Ntgio1Hk7qPpVnb2oPXJl+Dw=="
     // const password = 'welogical'
-    const certificateBASE64 = this.trimMessage(cert)
+    // const certificateBASE64 = this.trimMessage(cert)
     // console.log(certificateBASE64,"ankit");
-    const privateKeyBASE64 = this.trimMessage(key)
+    // const privateKeyBASE64 = this.trimMessage(key)
     // console.log(privateKeyBASE64,"abhishek")
     const password = pwd
     //#region Create simplified structires for certificate and private key
@@ -145,7 +145,7 @@ export class AppComponent {
     });
     //#endregion
     //#region Save encoded data
-    //  console.log(pkcs12.toString())
+     console.log(pkcs12.toString())
     return pkcs12.toSchema().toBER(false);
 
   }
